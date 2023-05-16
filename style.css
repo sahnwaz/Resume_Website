@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+/* Global Settings Start*/
+:root{
+    --clrone: #1976D2; 
+    --clrtwo:#fff; 
+    --clrthree: #565555;
+}
+
+/* for Smooth Scrolling*/
+html {scroll-behavior: smooth; 
+font-size: 62.5%; /* 62.5% = 10px */ 
+overflow-x: hidden;}
+html::-webkit-scrollbar {width:2rem;}
+html::-webkit-scrollbar-track {background: var(--clrtwo); border: 1px solid var(--clrone);}
+html::-webkit-scrollbar-thumb {background:var(--clrone); border-radius: 1rem;}
+/* html::-webkit-scrollbar-thumb:hover {background: rgb(141, 232, 180);} */
+
+*{
+    font-family: Trebuchet, sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    /* text-transform: capitalize;  */
+    transition: all .2s linear;}
+
+/* CSS Pseudo Element Select  Used here, means if you select any text from page, selected text color and background. */
+*::selection{background:var(--clrone); color: var(--clrtwo);}
+
+body {background: var(--clrtwo);
+    overflow-x: hidden;
+    padding-left: 33.6rem;
+    max-width: 1500px;
+    margin-right: 1rem;
+}
+
+/* Section Common */
+section{ min-height: 100vh; padding: .5rem;}
+
+/* Heading of all sections (about, education, portfolio, contact) */
+.heading{
+    text-align: center;
+    margin:0 1rem;
+    font-size: 3.5rem;
+    padding:1rem;
+    border-bottom: .2rem dotted var(--clrone);
+    color: var(--clrthree);
+}
+
+.heading span{color:var(--clrone);}
+
+/* Global Settings End*/
+
+/* Left Panel Menu Section Starts  */
+header{
+    position: fixed;
+    top:5px; left:0;
+    z-index: 5;
+    height:100%;
+    width:33rem;
+    background:var(--clrtwo);
+    border-right: 1px solid var(--clrone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+/* left menu image and title start */
+.user img{
+    height:16.3rem;
+    width:16.3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border:.1rem solid var(--clrone);
+    box-shadow: .2rem .1rem 2rem .7rem var(--clrthree);
+}
+
+.user img:hover {cursor: pointer; }
+
+.user .name{
+    font-size: 3.5rem;
+    color: var(--clrthree);
+    -webkit-text-stroke: .5px var(--clrone); 
+}
+
+.user .post{
+    font-size: 2rem;
+    color:var(--clrthree);
+}
+/* left menu image and title end */
+
+
+header .navbar{ width:100%;}
+
+header .navbar ul{
+    list-style: none;
+    padding:1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding:1rem;
+    margin: 1rem 0;
+    background:var(--clrtwo);
+    color:var(--clrthree);
+    font-size: 2rem;
+    border: .1rem solid var(--clrone);
+    border-radius: 2rem;
+}
+
+header .navbar ul li a:hover{
+    background:var(--clrone);
+}
+/* Left Panel Menu Section End  */
+
+/* Day night mode Start */
+.mode {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10rem;
+}
+
+.mode button {margin: .3rem;}
+/* mode button */
+.btn{
+    padding: 1rem 2.5rem;
+    background: var(--clrtwo);
+    color: var(--clrthree);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    border-radius: 4rem;
+    border: .1rem solid var(--clrone);
+}
+
+.btn i{padding:0 .5rem; font-size: 1.8rem;}
+.btn:hover{ background:var(--clrone);}
+/* Day night mode End */
+
+
+/*Home/Hello section Start*/
+.home{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    /* padding: 0 5rem; */
+}
+
+.home .backimg {vertical-align: middle; opacity: .1; border-radius: 1rem; max-height: inherit;}
+
+.home .cover {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.cover .txt { margin-top: 21rem;}
+
+/* Image in home section----------------------------------------------------------- */
+
+.imghide {display: none;}
+
+/* Image in home section----------------------------------------------------------- */
+
+.home h1{font-size:3rem; color: var(--clrthree);}
+
+.home h3{ font-size: 2rem; color: var(--clrthree);}
+
+.home h1 span{color:var(--clrone); text-shadow: 2.5px 2px 2px var(--clrthree);}
+
+.home p{ font-size: 1.6rem; color: var(--clrthree); padding: 1rem 0; margin-right: 5rem; line-height: 3rem; font-weight: bold;}
+
+/* Home/Hello section End*/
+
+
+/* About Section Starts--------------------------------------------------------------------------*/
+.about .row{
+    display: flex;
+    padding:1rem 0;
+    flex-direction: column;
+}
+
+.about .row .info{ padding:1rem 1rem;}
+
+.tbltd td{ padding:1rem 0;  line-height: 2.5rem; border-bottom: .01rem solid lightblue;}
+.tbltd td:nth-child(1) {color:var(--clrone); font-size: 1.7rem; font-weight: bold; }
+.tbltd td:nth-child(2) {color: var(--clrthree); font-size: 1.6rem; font-weight: normal;}
+
+.about .row .counter h2{ font-size: 2rem; margin: 1rem 2rem; color: var(--clrthree); margin-top: 2rem;}
+.about .row p{font-size: 1.6rem; color: var(--clrthree);margin-left: 2rem; line-height: 2.5rem; }
+
+.about .row .counter{
+    display: flex;    
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.about .row .counter .box{
+    /* width:21rem; */
+    width: 90%;
+    min-height: 12.5rem;
+    background: var(--clrtwo);
+    /* text-align: center; */
+    padding: 0.7rem;
+    margin:2rem;
+    border-radius: 1rem;
+    color: var(--clrthree);
+}
+
+.about .row .counter .box span{ padding: 1rem; margin: .1rem 0; display: inline-block; 
+font-size: 1.4rem; background-color: rgb(138, 219, 246); border-radius: 0.5rem; color: black;}
+
+.about .row .counter .box h3{ color:var(--clrthree); font-size: 1.7rem; font-weight: bold; margin-top: 2rem;}
+/* About Section Ends-----------------------------------------------------------------------------------*/
+
+
+/* My Eduction and Exper.Section Start-------------------------------------------------------------------*/
+.education .box_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box_container .box{
+    min-width:27.9rem;
+    min-height: 11rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid var(--clrthree);
+    position: relative;
+}
+
+.education .box_container .box .spn1{
+    font-size: 1.3rem;
+    background:var(--clrtwo); 
+    border: 0.1rem solid var(--clrone);
+    font-weight: bold;
+    color: var(--clrthree);
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box_container h2{
+    font-size: 2rem; margin: 1rem; color: var(--clrthree);
+    margin-top: 2rem; width: 100%;
+}
+
+.education .box_container .box h3{
+    font-size: 1.6rem;
+    color: var(--clrthree);
+    padding-top: 1.5rem;
+}
+
+.education .box_container .box p{
+    font-size: 1.4rem;
+    color: var(--clrthree);
+    padding: 1rem 0;
+    line-height: 2rem;
+}
+
+.education .box_container .box i{
+    position: absolute;
+    top:-4.4rem; left:-2.7rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--clrthree);
+    background:var(--clrone);
+}
+/* My Eduction Section End-------------------------------------------------------------------*/
+
+
+/* My Portfolio Section Start-------------------------------------------------------------------*/
+.portfolio .box_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.portfolio .box_container .box{
+    height: 20rem;
+    width:26rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .box_container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.portfolio .box_container .box:hover img{
+    transform: scale(1.2);
+}
+/* My Portfolio Section End-------------------------------------------------------------------*/
+
+/* My Contact Section Start-------------------------------------------------------------------*/
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:4rem;
+    padding-bottom: 0;
+}
+
+.contact .row form{
+    flex:1 1 43.2rem;
+    padding:2rem;
+    margin:2rem;
+    margin-bottom: 1rem;
+}
+
+.contact .row form input, textarea {border-radius: 1rem;}
+
+.contact .row form input[type="text"] {background-color: var(--clrtwo); border: 1px solid var(--clrone);}
+.contact .row form input[type="tel"] {background-color: var(--clrtwo); border: 1px solid var(--clrone);}
+.contact .row form input[type="email"] {background-color: var(--clrtwo); border: 1px solid var(--clrone);}
+
+.contact .row form .box{
+    padding:1.5rem;
+    margin:1rem 0;
+    background:var(--clrtwo); 
+    border: 1px solid var(--clrone);
+    color:var(--clrthree);
+    text-transform: none;
+    font-size: 1.7rem;
+    width:100%;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: var(--clrthree);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info a{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--clrthree);
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info a i{
+    padding-right: 1rem;
+    color:var(--clrone);
+}
+
+.contact .top img{
+    width: 40px;
+    margin-right: 20px;
+    float: right;
+    }
+
+.contact .top img:hover {width: 50px;}
+/* My Contact Section End-------------------------------------------------------------------*/
+
+
+/* Media queries ------------------------------------------------------------------ */
+@media (max-width:1200px) {
+        html{ font-size: 56.25%;}
+        .home{padding:1rem 4rem;}
+}
+
+@media (max-width:991px) {
+        header{left:-101%; position: absolute;}
+        .home {height: 90rem;} 
+        .imghide{display: block; margin-top: 20rem;}
+        .cover .txt {margin-top: 1rem;}
+        body {padding:0;}
+}
+
+@media (max-width:768px) {
+    html{font-size: 50%;}
+ }
+
+@media (max-width:400px){
+    header{width: 100vw;}
+    .heading{margin:0 3rem;}
+    .about .row .counter .box{width: 100%;} 
+    .education .box_container .box{width:100%;}
+    .portfolio .box_container .box{ width:100%;}
+    .contact .row form{margin:3rem 0;}
+ }
+
